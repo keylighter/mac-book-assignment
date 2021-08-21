@@ -2,17 +2,10 @@
 
 //storage ,memory,delivery feature cost calculate 
 
-function updateFeature(feature, price, isBig) {
+function updateFeature(feature, price) {
     const featureCost = document.getElementById(feature + '-cost');
-    if (isBig == true) {
-        featureCost.innerText = price;
-    }
-    else if (isBig == false) {
-        featureCost.innerText = price;
-    }
-    else {
-        featureCost.innerText = price;
-    }
+
+    featureCost.innerText = price;
     calculateTotal();
 }
 
@@ -53,11 +46,11 @@ function calculateTotal() {
 
 document.getElementById('fast-delivery').addEventListener('click', function () {
 
-    updateFeature('delivery', 20, true);
+    updateFeature('delivery', 20);
 })
 document.getElementById('late-delivery').addEventListener('click', function () {
 
-    updateFeature('delivery', 0, false);
+    updateFeature('delivery', 0);
 
 })
 
@@ -67,20 +60,20 @@ document.getElementById('small-storage').addEventListener('click', function () {
     updateFeature('storage', 0)
 })
 document.getElementById('medium-storage').addEventListener('click', function () {
-    updateFeature('storage', 100, true);
+    updateFeature('storage', 100);
 })
 document.getElementById('large-storage').addEventListener('click', function () {
-    updateFeature('storage', 180, false);
+    updateFeature('storage', 180);
 })
 
 //memory  calculate
 
 document.getElementById('small-memory').addEventListener('click', function () {
-    updateFeature('memory', 0, true);
+    updateFeature('memory', 0);
 })
 
 document.getElementById('medium-memory').addEventListener('click', function () {
-    updateFeature('memory', 180, true);
+    updateFeature('memory', 180);
 })
 
 
